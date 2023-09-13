@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html style="font-size: 184.533px;" class="translated-ltr"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+  
+<title>CRMEB ระบบห้างสรรพสินค้าโอเพ่นซอร์สคุณภาพสูง</title>
+<meta name="description" content="CRMEB">
+<meta name="keywords" content="CRMEB">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+  <!--全局样式-->
+<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/static/css/wap/reset.css">
+<link rel="stylesheet" href="/static/css/wap/common.css?version=2.5">
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/css/swiper.css">-->
+<link rel="stylesheet" href="/static/css/web/swiper-bundle.min.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1059545_cnaqpixlcx8.css">
+<!-- 动画 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<!--<script src="https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/js/swiper.js"></script>-->
+<script src="/static/js/swiper-bundle.min.js"></script>
+<script src="/static/js/jquery-1.8.3.min.js"></script>
+<script>!function (e, t) {var n = t.documentElement, d = e.devicePixelRatio || 1; function i() {var e = n.clientWidth / 3.75; n.style.fontSize = e + "px"} if (function e() {t.body ? t.body.style.fontSize = "16px" : t.addEventListener("DOMContentLoaded", e)}(), i(), e.addEventListener("resize", i), e.addEventListener("pageshow", function (e) {e.persisted && i()}), 2 <= d) {var o = t.createElement("body"), a = t.createElement("div"); a.style.border = ".5px solid transparent", o.appendChild(a), n.appendChild(o), 1 === a.offsetHeight && n.classList.add("hairlines"), n.removeChild(o)} }(window, document)</script>
+
+
+  
+<link rel="stylesheet" href="/static/css/wap/index.css?version=2.1">
+
+
+<style>
+  #menu{
+      width: 100%;
+      height: 0.48rem;
+      background-color: rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 0 0.15rem;
+      z-index: 999;
+  }
+  #menu .logo{
+      width: 0.72rem;
+  }
+  #menu .iconcaidan1{
+      color: #fff;
+      font-size: 0.22rem !important;
+  }
+  .mask{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: all 0.3s ease-in-out;
+      z-index: 1000;
+  }
+  .drawer-container {
+      z-index: 1001;
+      position: fixed;
+      right: 0;
+      top: 0;
+      /*transform-origin: center;*/
+      /*transition: all 0.5s;*/
+      width: 2.5rem;
+      height: 100vh;
+      background-color: #fff;
+  }
+  .drawer-container .top_box{
+      width: 100%;
+      height: 0.48rem;
+      padding: 0 0.15rem;
+  }
+  .drawer-container .top_box img{
+      width: 0.66rem;
+  }
+  .drawer-container .top_box .iconfont{
+      font-size: 0.18rem !important;
+  }
+  .drawer_body{
+      padding: 0 0.15rem;
+      /*margin-top: 0.3rem;*/
+  }
+  .drawer_cell{
+      color: #000;
+      text-decoration: none;
+      height: 0.5rem;
+      border-bottom: 1px solid #EAEAEA;
+  }
+  .drawer_cell .iconfont{
+      color: #CDD1D3;
+      font-size: 0.16rem;
+  }
+  .drawer .pro_cell{
+      width: 2.01rem;
+      height: 0.48rem;
+      border-bottom: 1px solid #EAEAEA;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      font-size: 0.13rem;
+      /*color: #727880;*/
+      color: #666;
+      text-decoration: none;
+      margin-left: 0.2rem;
+  }
+</style><link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.qhDXWpKopYk.L.W.O/d=0/rs=AN8SPfp0QXhhaDDdjg_LgcSqoZiPEzC1tw/m=el_main_css"></head>
+
+<body style="font-size: 16px;"><header>
+  <div id="menu" class="flex flex-justify-between align-center" style="background-color: rgba(0, 0, 0, 0.1); box-shadow: none;">
+      <img src="https://www.crmeb.com/static/images/logo.png" alt="" class="logo">
+      <span class="iconfont iconcaidan1" id="openNav" style="color: rgb(255, 255, 255);"></span>
+  </div>
+  <div class="drawer d-none" style="display: none;">
+      <div class="mask"></div>
+      <div class="drawer-container">
+          <div class="top_box flex flex-justify-between align-center">
+              <img src="https://www.crmeb.com/static/images/dark_logo.png" alt="">
+              <span class="iconfont iconguanbi1"></span>
+          </div>
+          <div class="drawer_body">
+              <a href="/index" class="drawer_cell flex flex-justify-between align-center">
+                  <span class="f-s-14 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">หน้าแรก</font></font></span>
+              </a>
+              <div>
+                  <div class="drawer_cell flex flex-justify-between align-center nav_slide">
+                      <span class="f-s-14 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ศูนย์ผลิตภัณฑ์</font></font></span>
+                      <span class="iconfont iconxiala"></span>
+                  </div>
+                  <div class="item_body d-none">
+                      <a href="/index/criteria" class="pro_cell"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRMEB รุ่นมาตรฐาน</font></font></a>
+                      <a href="/index/pro" class="pro_cell"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRMEB รุ่น Pro</font></font></a>
+                      <a href="/index/pro_store" class="pro_cell"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRMEB เวอร์ชันหลายร้านค้า</font></font></a>
+                      <a href="/index/merchant" class="pro_cell"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRMEB ผู้ค้าหลายราย</font></font></a>
+                      <a href="/index/java" class="pro_cell"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เวอร์ชันจาวา CRMEB</font></font></a>
+                      <a href="/index/java_mer" class="pro_cell"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRMEB เวอร์ชันการค้าต่างประเทศ</font></font></a>
+                      <a href="/index/read" class="pro_cell"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">การจ่ายความรู้ CRMEB</font></font></a>
+<!--                        <a href="https://www.tuoluojiang.com" class="pro_cell">陀螺匠·企业助手</a>-->
+                  </div>
+              </div>
+              <div>
+                  <div class="drawer_cell flex flex-justify-between align-center nav_slide">
+                      <span class="f-s-14 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ช่องทางความร่วมมือ</font></font></span>
+                      <span class="iconfont iconxiala"></span>
+                  </div>
+                  <div class="item_body d-none">
+                      <a href="/about/region" class="pro_cell"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ความร่วมมือ</font></font></a>
+                      <a href="/customized" class="pro_cell"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ความร่วมมือที่กำหนดเอง</font></font></a>
+                  </div>
+              </div>
+              <a href="/news/list" class="drawer_cell flex flex-justify-between align-center">
+                  <span class="f-s-14 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ข่าว</font></font></span>
+              </a>
+              <a href="/service" class="drawer_cell flex flex-justify-between align-center">
+                  <span class="f-s-14 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">การสนับสนุนการบริการ</font></font></span>
+              </a>
+              <div>
+                  <div class="drawer_cell flex flex-justify-between align-center nav_slide">
+                      <span class="f-s-14 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เกี่ยวกับเรา</font></font></span>
+                      <span class="iconfont iconxiala"></span>
+                  </div>
+                  <div class="item_body d-none">
+                      <a href="/about" class="pro_cell"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เกี่ยวกับเรา</font></font></a>
+                      <a href="/about/contact" class="pro_cell"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ติดต่อเรา</font></font></a>
+                      <a href="/about/join" class="pro_cell"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เข้าร่วมกับเรา</font></font></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+<script>
+  $(window).scroll(function() {
+      var heightTop = $(document).scrollTop();
+      if (heightTop > 300) {
+          $('#menu img').attr('src', 'https://www.crmeb.com/static/images/dark_logo.png');
+          $('#menu').css({"backgroundColor": "#fff","boxShadow":"0px 3px 0.1rem rgb(0 78 193 / 10%)"});
+          $('#menu .iconcaidan1').css({"color": "#000",});
+      } else {
+          $('#menu img').attr('src', 'https://www.crmeb.com/static/images/logo.png');
+          $('#menu').css({"backgroundColor": "rgba(0,0,0,.1)","boxShadow":"none"});
+          $('#menu .iconcaidan1').css({"color": "#fff"});
+      }
+  });
+  $('#openNav').click(function(){
+      $('.drawer').show()
+  })
+  $('.iconguanbi1').click(function(){
+      $('.drawer').hide()
+  })
+  $('.mask').click(function(){
+      $('.drawer').hide()
+  })
+  $('.nav_slide').click(function () {
+      $(this).children('.iconfont').find('.iconxiala-copy').removeClass('iconxiala-copy').addClass('iconxiala');
+      $(this).parent().siblings().children('.item_body').slideUp();
+      $(this).next().slideToggle();
+      $(this).children('.iconfont').toggleClass('iconxiala').toggleClass('iconxiala-copy');
+  });
+</script>
+
+
+<div class="home">
+<!-- 轮播图 -->
+<div class="banner swiper-container swiper-initialized swiper-horizontal">
+  <div class="swiper-wrapper" id="swiper-wrapper-66b861055dd582a46" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-4844px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8" role="group" aria-label="9/9" style="width: 692px;">
+      <a href="http://www.crmeb.com/web/index/merchant" target="_blank"><img src="https://crmebgw.oss-cn-hangzhou.aliyuncs.com/036a620220908144607846.jpg" alt="พ่อค้าหลายราย"></a>
+    </div>
+          <div class="swiper-slide" data-swiper-slide-index="0" role="group" aria-label="1/9" style="width: 692px;">
+      <a href="https://mp.weixin.qq.com/s?__biz=MzIwMzAyMjg5OQ==&amp;mid=2247490283&amp;idx=1&amp;sn=15ef2bbef3fce6b34f1cc25953f80a8e&amp;chksm=96d4edb7a1a364a13e0b83e26acda13f0369eacf43de59f1dbaa3ea051655b832e594eda0ee3&amp;token=1485465418&amp;lang=zh_CN#rd" target="_blank"><img src="https://crmebgw.oss-cn-hangzhou.aliyuncs.com/ee40e202309131130556259.jpg" alt="รุ่นมาตรฐาน 5.2"></a>
+    </div>
+          <div class="swiper-slide" data-swiper-slide-index="1" role="group" aria-label="2/9" style="width: 692px;">
+      <a href="http://www.crmeb.com/web/index/pro" target="_blank"><img src="https://crmebgw.oss-cn-hangzhou.aliyuncs.com/372be202301151426394472.jpg" alt="ภาพใหญ่"></a>
+    </div>
+          <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3/9" style="width: 692px;">
+      <a href="https://www.crmeb.com/ask/thread/21306" target="_blank"><img src="https://crmebgw.oss-cn-hangzhou.aliyuncs.com/acbd9202302091432072283.jpg" alt="พ่อค้าหลายราย"></a>
+    </div>
+          <div class="swiper-slide" data-swiper-slide-index="3" role="group" aria-label="4/9" style="width: 692px;">
+      <a href="https://www.crmeb.com/index/java_merchant" target="_blank"><img src="https://crmebgw.oss-cn-hangzhou.aliyuncs.com/a3694202306061007598632.png" alt="Java ผู้ค้าหลายราย"></a>
+    </div>
+          <div class="swiper-slide" data-swiper-slide-index="4" role="group" aria-label="5/9" style="width: 692px;">
+      <a href="https://www.crmeb.com/h5/pages/goods_details/index?id=750" target="_blank"><img src="https://crmebgw.oss-cn-hangzhou.aliyuncs.com/0f963202212022340035049.jpg" alt="JAVA ผู้ค้าหลายราย"></a>
+    </div>
+          <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="5" role="group" aria-label="6/9" style="width: 692px;">
+      <a href="https://www.crmeb.com/index/criteria" target="_blank"><img src="https://crmebgw.oss-cn-hangzhou.aliyuncs.com/e567d202212151753287770.jpg" alt="รุ่นมาตรฐาน"></a>
+    </div>
+          <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="6" role="group" aria-label="7/9" style="width: 692px;">
+      <a href="https://www.crmeb.com/index/pro" target="_blank"><img src="https://crmebgw.oss-cn-hangzhou.aliyuncs.com/24d0a202209081445311638.jpg" alt="มือโปร"></a>
+    </div>
+          <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="7" role="group" aria-label="8/9" style="width: 692px;">
+      <a href="http://www.crmeb.com/web/index/pro_store" target="_blank"><img src="https://crmebgw.oss-cn-hangzhou.aliyuncs.com/d9f0d202209081445507115.jpg" alt="รุ่นหลายร้านค้า"></a>
+    </div>
+          <div class="swiper-slide" data-swiper-slide-index="8" role="group" aria-label="9/9" style="width: 692px;">
+      <a href="http://www.crmeb.com/web/index/merchant" target="_blank"><img src="https://crmebgw.oss-cn-hangzhou.aliyuncs.com/036a620220908144607846.jpg" alt="พ่อค้าหลายราย"></a>
+    </div>
+        <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" role="group" aria-label="1/9" style="width: 692px;">
+      <a href="https://mp.weixin.qq.com/s?__biz=MzIwMzAyMjg5OQ==&amp;mid=2247490283&amp;idx=1&amp;sn=15ef2bbef3fce6b34f1cc25953f80a8e&amp;chksm=96d4edb7a1a364a13e0b83e26acda13f0369eacf43de59f1dbaa3ea051655b832e594eda0ee3&amp;token=1485465418&amp;lang=zh_CN#rd" target="_blank"><img src="https://crmebgw.oss-cn-hangzhou.aliyuncs.com/ee40e202309131130556259.jpg" alt="รุ่นมาตรฐาน 5.2"></a>
+    </div></div>
+  <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal" style="bottom: 3.1rem;"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 7" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9"></span></div>
+<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+<!-- 推荐 -->
+<div class="flex flex-justify-between recommend">
+  <a class="flex align-center recommend_line" href="https://gitee.com/ZhongBangKeJi/CRMEB">
+    <img src="https://www.crmeb.com/static/images/ad_datong.png" alt="">
+    <div class="recommend_info">
+      <p class="f-s-15 text-333 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRMEB เวอร์ชันโอเพ่นซอร์ส</font></font></p>
+      <p class="f-s-12 text-999"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ระบบอีคอมเมิร์ซโอเพ่นซอร์สฟรี</font></font></p>
+    </div>
+  </a>
+  <a class="flex align-center" href="/index/pro">
+    <img src="https://www.crmeb.com/static/images/ad_pro.png" alt="">
+    <div class="recommend_info">
+      <p class="f-s-15 text-333 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRMEB รุ่น Pro</font></font></p>
+      <p class="f-s-12 text-999"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ระบบอีคอมเมิร์ซการตลาดโดเมนส่วนตัวประสิทธิภาพสูง</font></font></p>
+    </div>
+  </a>
+</div>
+<!-- 产品 -->
+<div class="product">
+  <p class="main_tit text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ผลิตภัณฑ์และบริการของ CRMEB</font></font></p>
+  <p class="second_tit text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRMEB มุ่งมั่นที่จะให้บริการซอฟต์แวร์อิสระแบบหลายช่องทางและหลายสถานการณ์แก่นักพัฒนาสำหรับอุตสาหกรรมอีคอมเมิร์ซ ทางเลือกและความไว้วางใจของนักพัฒนามากกว่า 400,000 รายนั้นคุ้มค่าแก่ความไว้วางใจ</font></font></p>
+  <div class="grid_box">
+    <div class="grid_item">
+      <div class="border-bottom flex align-center p-b-9">
+        <img src="https://www.crmeb.com/static/images/biaozhun.png" alt="" class="pro_logo">
+        <p class="f-s-15 text-333 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRMEB รุ่นมาตรฐาน</font></font></p>
+      </div>
+      <div class="pro_body">
+        <div class="desc m-t-11 f-s-13 text-999"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เวอร์ชันมาตรฐานได้รับการพัฒนาโดยใช้ TP6+Uni-app และเป็นโอเพ่นซอร์สโดยสมบูรณ์และไม่มีการเข้ารหัส รองรับการซิงโครไนซ์บัญชีสาธารณะ มินิโปรแกรม H5 และบัญชีหลายเทอร์มินัล PC และสามารถจัดทำแพ็คเกจ APP ได้อย่างรวดเร็ว</font></font></div>
+        <div class="flex m-t-24">
+          <div class="pro_btn primary kefu_qr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ทดลองฟรี</font></font></div>
+          <a href="/index/criteria" class="pro_btn m-l-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ตรวจสอบรายละเอียด</font></font></a>
+        </div>
+      </div>
+    </div>
+    <div class="grid_item">
+      <div class="border-bottom flex align-center p-b-9">
+        <img src="https://www.crmeb.com/static/images/pro_dan.png" alt="" class="pro_logo">
+        <p class="f-s-15 text-333 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRMEB รุ่น Pro</font></font></p>
+      </div>
+      <div class="pro_body">
+        <div class="desc m-t-11 f-s-13 text-999"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">รุ่น Pro คือระบบอีคอมเมิร์ซการตลาดโดเมนส่วนตัวที่มีประสิทธิภาพสูง ช่วยให้ผู้ค้าแบรนด์บรรลุการแปลงการรับส่งข้อมูลในโดเมนสาธารณะและการตกตะกอนของโดเมนส่วนตัว และใช้การดำเนินงานอัจฉริยะแบบ Omni-channel</font></font></div>
+        <div class="flex m-t-24">
+          <div class="pro_btn primary kefu_qr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ทดลองฟรี</font></font></div>
+          <a href="/index/pro" class="pro_btn m-l-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ตรวจสอบรายละเอียด</font></font></a>
+        </div>
+      </div>
+    </div>
+    <div class="grid_item">
+      <div class="border-bottom flex align-center p-b-9">
+        <img src="https://www.crmeb.com/static/images/pro_duo.png" alt="" class="pro_logo">
+        <p class="f-s-15 text-333 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRMEB เวอร์ชันหลายร้านค้า</font></font></p>
+      </div>
+      <div class="pro_body">
+        <div class="desc m-t-11 f-s-13 text-999"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เวอร์ชันหลายร้านค้าเป็นระบบอีคอมเมิร์ซค้าปลีกอัจฉริยะแบบหลายร้านค้าแบบลูกโซ่ โดยผ่านการจัดการร้านค้าแบบครบวงจร การจัดการสมาชิก การซิงโครไนซ์กิจกรรมออนไลน์และออฟไลน์ และคู่มือช้อปปิ้งอัจฉริยะ ช่วยให้องค์กรธุรกิจในเครือแบรนด์สามารถอัพเกรดการจัดการดิจิทัลได้อย่างเต็มที่</font></font></div>
+        <div class="flex m-t-24">
+          <div class="pro_btn primary kefu_qr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ทดลองฟรี</font></font></div>
+          <a href="/index/pro_store" class="pro_btn m-l-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ตรวจสอบรายละเอียด</font></font></a>
+        </div>
+      </div>
+    </div>
+    <div class="grid_item">
+      <div class="border-bottom flex align-center p-b-9">
+        <img src="https://www.crmeb.com/static/images/merchart.png" alt="" class="pro_logo">
+        <p class="f-s-15 text-333  font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRMEB ผู้ค้าหลายราย</font></font></p>
+      </div>
+      <div class="pro_body">
+        <div class="desc m-t-11 f-s-13 text-999"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Multi-Merchant คือระบบอีคอมเมิร์ซแพลตฟอร์ม B2B2C ที่มีการชำระบัญชีผู้ค้าหลายรูปแบบ โดยรองรับโหมดการทำงาน เช่น การดำเนินการด้วยตนเองของแพลตฟอร์ม และการส่งเสริมการลงทุน </font><font style="vertical-align: inherit;">ตั้งแต่การลงทะเบียนร้านค้า การจัดการบัญชี การจัดการสมาชิก ไปจนถึงการวิเคราะห์ผู้ใช้ มีฟังก์ชันครบครันและใช้งานง่าย</font></font></div>
+        <div class="flex m-t-24">
+          <div class="pro_btn primary kefu_qr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ทดลองฟรี</font></font></div>
+          <a href="/index/merchant" class="pro_btn m-l-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ตรวจสอบรายละเอียด</font></font></a>
+        </div>
+      </div>
+    </div>
+    <div class="grid_item">
+      <div class="border-bottom flex align-center p-b-9">
+        <img src="https://www.crmeb.com/static/images/java_dan.png" alt="" class="pro_logo">
+        <p class="f-s-15 text-333 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เวอร์ชัน CRMEB Java</font></font></p>
+      </div>
+      <div class="pro_body">
+        <div class="desc m-t-11 f-s-13 text-999"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ระบบได้รับการพัฒนาแบบหลายชั้นโดยใช้เทคโนโลยี Java และใช้วิธีการพัฒนา MVC หลัก ซึ่งครอบคลุมบัญชีสาธารณะ มินิโปรแกรม H5 และเทอร์มินัลหลายแอปของ APP ทำให้กระบวนการของห้างสรรพสินค้าเสร็จสมบูรณ์ ปรับแต่งการดำเนินงานของผู้ใช้ และสำรวจศักยภาพของตลาดอย่างเต็มที่</font></font></div>
+        <div class="flex m-t-24">
+          <div class="pro_btn primary kefu_qr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ทดลองฟรี</font></font></div>
+          <a href="/index/java" class="pro_btn m-l-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ตรวจสอบรายละเอียด</font></font></a>
+        </div>
+      </div>
+    </div>
+    <div class="grid_item">
+      <div class="border-bottom flex align-center p-b-9">
+        <img src="https://www.crmeb.com/static/images/java_duo.png" alt="" class="pro_logo">
+        <p class="f-s-15 text-333 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRMEB เวอร์ชันการค้าต่างประเทศ</font></font></p>
+      </div>
+      <div class="pro_body">
+        <div class="desc m-t-11 f-s-13 text-999"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เวอร์ชันการค้าต่างประเทศเป็นระบบแพลตฟอร์มอีคอมเมิร์ซข้ามพรมแดนที่รองรับการใช้งานแบบอิสระ </font><font style="vertical-align: inherit;">รองรับการลงทะเบียนผู้ค้า การสลับหลายภาษา การส่งข้อความระหว่างประเทศ การชำระเงิน PayPal และการเข้าสู่ระบบของบุคคลที่สาม ช่วยให้บริษัทต่างๆ ขยายธุรกิจในต่างประเทศได้อย่างรวดเร็ว</font></font></div>
+        <div class="flex m-t-24">
+          <div class="pro_btn primary kefu_qr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ทดลองฟรี</font></font></div>
+          <a href="/index/java_mer" class="pro_btn m-l-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ตรวจสอบรายละเอียด</font></font></a>
+        </div>
+      </div>
+    </div>
+    <div class="grid_item">
+      <div class="border-bottom flex align-center p-b-9">
+        <img src="https://www.crmeb.com/static/images/zhishifufei.png" alt="" class="pro_logo">
+        <p class="f-s-15 text-333 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ระบบการจ่ายความรู้</font></font></p>
+      </div>
+      <div class="pro_body">
+        <div class="desc m-t-11 f-s-13 text-999"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ระบบการจ่ายความรู้ช่วยให้อาจารย์ปรับตัวและสร้างรายได้จากเนื้อหาได้อย่างรวดเร็วผ่านรูปแบบต่างๆ เช่น การถ่ายทอดสด วิดีโอ เสียง กราฟิก และห้างสรรพสินค้าธนาคารคำถาม</font></font></div>
+        <div class="flex m-t-24">
+          <div class="pro_btn primary kefu_qr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ทดลองฟรี</font></font></div>
+          <a href="/index/read" class="pro_btn m-l-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ตรวจสอบรายละเอียด</font></font></a>
+        </div>
+      </div>
+    </div>
+    <div class="grid_item">
+      <div class="border-bottom flex align-center p-b-9">
+        <img src="https://www.crmeb.com/static/images/dingzhi.png" alt="" class="pro_logo">
+        <p class="f-s-15 text-333 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">บริการปรับแต่งระดับสูง</font></font></p>
+      </div>
+      <div class="pro_body">
+        <div class="desc m-t-11 f-s-13 text-999"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เพื่อตอบสนองต่อความต้องการในการดำเนินงานส่วนบุคคลขององค์กร เราสามารถปรับแต่งระบบการตลาดอีคอมเมิร์ซพิเศษสำหรับองค์กร ให้การปรับแต่งระดับไฮเอนด์แบบตัวต่อตัว และเสริมศักยภาพลูกค้าแบรนด์ด้วยแอปพลิเคชันดิจิทัล</font></font></div>
+        <div class="flex m-t-24">
+          <div class="pro_btn primary kefu_qr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ทดลองฟรี</font></font></div>
+          <a href="/customized" class="pro_btn m-l-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ตรวจสอบรายละเอียด</font></font></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="kaifa">
+  <p class="main_tit text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เพิ่มขีดความสามารถของนักพัฒนาในการเร่งการเปลี่ยนแปลงทางดิจิทัลขององค์กร</font></font></p>
+  <p class="second_tit text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ทั้งหมดสำหรับนักพัฒนา! </font><font style="vertical-align: inherit;">เรามุ่งมั่นที่จะสร้างระบบอีคอมเมิร์ซที่คุ้มต้นทุนสูงเป็นพิเศษทั่วทั้งอุตสาหกรรม ประหยัดเวลาในการพัฒนา ลดการคิดค้นสิ่งใหม่ๆ และปรับปรุงประสิทธิภาพการพัฒนา ช่วยให้องค์กรต่างๆ บรรลุการดำเนินงานทางดิจิทัล!</font></font></p>
+  <img src="https://s3.bmp.ovh/imgs/2023/01/03/790886225d81c4ae.png" alt="" class="m-t-30">
+</div>
+<div class="qudao">
+  <p class="main_tit text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ประสบการณ์ผู้ใช้ขั้นสุดยอดแบบหลายช่องทางและทุกเทอร์มินัล</font></font></p>
+  <p class="second_tit text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">การจัดการแอปพลิเคชันหลายช่องทางและหลายเทอร์มินัล การรวมข้อมูล การซิงโครไนซ์ผู้ใช้ มอบประสบการณ์ขั้นสูงสุดแก่ผู้ใช้</font></font></p>
+  <img class="m-t-30" src="https://www.crmeb.com/static/images/index_duoduan.png" alt="">
+</div>
+<div class="yanfa">
+  <p class="main_tit text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ผลิตภัณฑ์ R&amp;D ที่มีมาตรฐานสูงและบริการท่าเทียบเรือจม</font></font></p>
+  <p class="second_tit text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ไม่ว่าคุณจะอยู่ที่ไหน คุณสามารถรับบริการคุณภาพสูงที่แปลเป็นภาษาท้องถิ่นของ CRMEB ได้</font></font></p>
+  <div class="grid_box">
+    <img src="https://www.crmeb.com/static/images/jishucd.png" alt="" class="grid_item">
+    <img src="https://www.crmeb.com/static/images/quanqiukaifazhe.png" alt="" class="grid_item">
+    <img src="https://www.crmeb.com/static/images/leijiaz.png" alt="" class="grid_item">
+    <img src="https://www.crmeb.com/static/images/fugaiquanguo.png" alt="" class="grid_item">
+  </div>
+</div>
+<div class="shili">
+  <p class="main_tit text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ความแข็งแกร่งที่แข็งแกร่งช่วยปกป้องนักพัฒนา</font></font></p>
+  <p class="second_tit text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ใช้ผลิตภัณฑ์ระบบที่ฟรีและยืดหยุ่น รองรับการปรับแต่ง และปรับขนาดได้สูงเพื่อนำประสบการณ์ขั้นสูงสุดมาสู่องค์กรและตอบสนองความต้องการการใช้งานของลูกค้า</font></font></p>
+  <div class="grid_box">
+    <div class="grid_item">
+      <img src="https://www.crmeb.com/static/images/icon/code_icon.png" alt="">
+      <p class="text-white f-s-17 my-10 font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ระบบมีเสถียรภาพและปลอดภัย</font></font></p>
+      <p class="sm_line my-10"></p>
+      <p class="f-s-13 text-white">8年产品打磨沉淀，40w +开发者的选择；系统独立部署稳定可靠，数据自主掌控安全放心！</p>
+    </div>
+    <div class="grid_item">
+      <img src="https://www.crmeb.com/static/images/icon/dingzhi_icon.png" alt="">
+      <p class="text-white f-s-17 my-10 font-bold">方便二次开发</p>
+      <p class="sm_line my-10"></p>
+      <p class="f-s-13 text-white">代码开源、注释清晰、文档齐全、二开便捷；方便开发者满足用户个性化定制需求。</p>
+    </div>
+    <div class="grid_item">
+      <img src="https://www.crmeb.com/static/images/icon/dajian_icon.png" alt="">
+      <p class="text-white f-s-17 my-10 font-bold">支持免费升级</p>
+      <p class="sm_line my-10"></p>
+      <p class="f-s-13 text-white">一次购买即享受终身免费升级权限，功能持续创新，价值日益增长</p>
+    </div>
+    <div class="grid_item">
+      <img src="https://www.crmeb.com/static/images/icon/mask_icon.png" alt="">
+      <p class="text-white f-s-17 my-10 font-bold">系统文档齐全</p>
+      <p class="sm_line my-10"></p>
+      <p class="f-s-13 text-white">每个产品都具备全面的开发、接口、安装、使用文档，帮助用户快速安装使用</p>
+    </div>
+    <div class="grid_item">
+      <img src="https://www.crmeb.com/static/images/icon/anquan_icon.png" alt="">
+      <p class="text-white f-s-17 my-10 font-bold">源码高度开源</p>
+      <p class="sm_line my-10"></p>
+      <p class="f-s-13 text-white">坚持系统代码高度开源，为开发者赋能，为创新开发奠定坚实基础</p>
+    </div>
+    <div class="grid_item">
+      <img src="https://www.crmeb.com/static/images/icon/kongzhi_icon.png" alt="">
+      <p class="text-white f-s-17 my-10 font-bold">高并发高性能</p>
+      <p class="sm_line my-10"></p>
+      <p class="f-s-13 text-white">系统并发能力强劲，坚持以用户为中心，为用户提供高效率高质量的使用体验</p>
+    </div>
+  </div>
+</div>
+<div class="hezuo">
+  <p class="white_main_tit text-center">我们的合作客户</p>
+  <p class="white_second_tit text-center">科技创新，我们从未停止，用心服务，只为赢得每位客户的信任和口碑</p>
+  <div class="banner swiper swiper-container swiper-initialized swiper-horizontal swiper-backface-hidden">
+    <div class="swiper-wrapper" id="swiper-wrapper-5ee311d694de7d2f" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-3185px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="3" role="group" aria-label="4/4" style="width: 637px;">
+        <div class="hezuo_box">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/f3c8571a3f435d0deadd751b6838bf47.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/74a8e9d9eba69a56719553d53eeb8268.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/acc4a32103eccedf6c1cd8357d3061c4.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/9e7fd5b0b67d7aa831a6006f87079ec8.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/1c9a56b753eb94b301c4636e85c8be18.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/f35c5c5f3b0cdef80be8b256b78b462b.png" alt="">
+                  </div>
+      </div>
+              <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="1/4" style="width: 637px;">
+        <div class="hezuo_box">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/37d89426322cf56e8edc112658ab91f6.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/d48b8900a2cf10e9449f08f698527e51.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/3e7ee30b225ddba3848eab539988b7ff.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/e18ba5c27b80170322fbbe1758013952.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/786724cc2fe6267be6cee2efc9fe5c35.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/6091111f395efeb0c2d4ed39bb0a9271.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/c300e761d24fe2fdd131bcad16efd8ed.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/35baa5146b68e9314faf9e7aa46be66e.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/c839680036bfc4864e4e7e2df5503b1e.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/a45da81aaf312278d5bfe88d8f79861d.png" alt="">
+                  </div>
+      </div>
+              <div class="swiper-slide" data-swiper-slide-index="1" role="group" aria-label="ยี่สิบสี่" style="width: 637px;">
+        <div class="hezuo_box">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/78b79e0fe0f5886849573917e6643d2d.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/4ff3f8effa92f2817a76cac87f3fc884.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/2ede39699c534d2cab09db964a6baadb.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/6b374f8dfab540c2d1e666ea4c309a1c.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/e87572597fa75aa04ab4dc5c9ea7ec1d.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/234cda57c022aed399b4c62e1c59d8f8.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/51013df8cf1cb69b8dc7a63f785952b1.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/79493f2cf22ecf42940187eae30249a8.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/8e1b58b0400fbef876a0ec724faae583.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/f29ddf13e7b6cacf82f2cf6d7881453d.png" alt="">
+                  </div>
+      </div>
+              <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3/4" style="width: 637px;">
+        <div class="hezuo_box">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/3892c2631dbb2dc1164294e9d5d9bf4d.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/86467fc9816f06b62cdbe6aed4cca54c.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/0d398b376afec08eb0cf854ac24b26a6.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/503acd1cecdd491391a6e1d155ab33c7.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/d3f655faf36467903aa2a3dbac9a62ce.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/c55da98992c35e7f62f45d0e3bc915b3.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/4aba96f252a018b391024bb6c5655694.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/4b8afdc203e37f00276a40a41e82019e.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/7dddd8787db910b99785f0c5bcfd0763.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/49dba5806182f6332d6e75be6c729c77.png" alt="">
+                  </div>
+      </div>
+              <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="3" role="group" aria-label="4/4" style="width: 637px;">
+        <div class="hezuo_box">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/f3c8571a3f435d0deadd751b6838bf47.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/74a8e9d9eba69a56719553d53eeb8268.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/acc4a32103eccedf6c1cd8357d3061c4.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/9e7fd5b0b67d7aa831a6006f87079ec8.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/1c9a56b753eb94b301c4636e85c8be18.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/f35c5c5f3b0cdef80be8b256b78b462b.png" alt="">
+                  </div>
+      </div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="1/4" style="width: 637px;">
+        <div class="hezuo_box">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/37d89426322cf56e8edc112658ab91f6.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/d48b8900a2cf10e9449f08f698527e51.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/3e7ee30b225ddba3848eab539988b7ff.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/e18ba5c27b80170322fbbe1758013952.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/786724cc2fe6267be6cee2efc9fe5c35.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/6091111f395efeb0c2d4ed39bb0a9271.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/c300e761d24fe2fdd131bcad16efd8ed.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/35baa5146b68e9314faf9e7aa46be66e.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/c839680036bfc4864e4e7e2df5503b1e.png" alt="">
+                    <img src="https://store.crmeb.net/uploads/attach/2022/08/20220831/a45da81aaf312278d5bfe88d8f79861d.png" alt="">
+                  </div>
+      </div></div>
+    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
+  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+</div>
+<div class="news">
+  <p class="main_tit text-center m-b-20">最新动态</p>
+      <div class="new_card">
+    <div class="new_card_header flex align-center base_bg" style="background-image: url(https://store.crmeb.net/uploads/attach/2022/08/20220826/bc34d143334b3351e9403e4754bf2917.png);">
+      <div class="info text-white">
+        <p class="f-s-12">Function Update</p>
+        <div class="flex align-center">
+          <span class="f-s-17">功能更新</span>
+          <p class="f-s-12 p-l-10"> | 功能更新</p>
+        </div>
+      </div>
+    </div>
+    <div class="new_card_body">
+      <div class="flex align-center">
+        <a href="/news/detail/990" class="f-s-16 text-333 flex-1 font-bold line1">CRMEB 标准版 v5.2 ，重磅升级，大变革！</a>
+        <span class="new_badge">new</span>
+      </div>
+      <p class="f-s-13 text-999 m-t-10 new_desc">
+        一直以来，我们的目标都不曾改变：以用户为中心，想用户之所想，为大家研发更优质、更出色的产品。在此过程中，每一个细节我们都锐意追求，每一项改变都力图精益求精，以不断迈向完美的目标。				</p>
+      <p class="dash-border m-t-11"></p>
+                      <div class="flex align-center m-t-8">
+        <span class="text-999 f-s-14">09-06</span>
+        <a href="/news/detail/988" class="flex-1 text-333 f-s-14 p-l-7 line1">CRMEB 知识付费版v2.1.6正式发布！</a>
+      </div>
+                      <div class="flex align-center m-t-8">
+        <span class="text-999 f-s-14">07-26</span>
+        <a href="/news/detail/976" class="flex-1 text-333 f-s-14 p-l-7 line1">正式发布！CRMEB 多商户Java版 v1.3上线啦！</a>
+      </div>
+                      <div class="flex align-center m-t-8">
+        <span class="text-999 f-s-14">07-17</span>
+        <a href="/news/detail/973" class="flex-1 text-333 f-s-14 p-l-7 line1">正式发布！CRMEB 多店版v2.5上线啦！</a>
+      </div>
+                      <div class="flex align-center m-t-8">
+        <span class="text-999 f-s-14">07-17</span>
+        <a href="/news/detail/972" class="flex-1 text-333 f-s-14 p-l-7 line1">CRMEB多商户Java版v1.3更新预告！v1.4功能收集！</a>
+      </div>
+                    </div>
+  </div>
+      <div class="new_card">
+    <div class="new_card_header flex align-center base_bg" style="background-image: url(https://store.crmeb.net/uploads/attach/2022/08/20220826/eec087ff6c73f6203257b2a2173fcf05.png);">
+      <div class="info text-white">
+        <p class="f-s-12">Company Dynamics</p>
+        <div class="flex align-center">
+          <span class="f-s-17">公司新闻</span>
+          <p class="f-s-12 p-l-10"> | 公司新闻</p>
+        </div>
+      </div>
+    </div>
+    <div class="new_card_body">
+      <div class="flex align-center">
+        <a href="/news/detail/977" class="f-s-16 text-333 flex-1 font-bold line1">爱心传递，温暖共享——众邦科技2023年度爱心公益行</a>
+        <span class="new_badge">new</span>
+      </div>
+      <p class="f-s-13 text-999 m-t-10 new_desc">
+        夕阳无限好，人间重晚情。为更好的回馈社会，关爱社会弱势群体，弘扬中华传统美德，2023年7月28日，西安众邦网络科技有限公司（以下简称“众邦科技”）全体成员前往王寺敬老院开展爱心公益活动，为老人们送去关爱和礼物，并献上最真挚的祝福。				</p>
+      <p class="dash-border m-t-11"></p>
+                      <div class="flex align-center m-t-8">
+        <span class="text-999 f-s-14">05-24</span>
+        <a href="/news/detail/968" class="flex-1 text-333 f-s-14 p-l-7 line1">西安市中小企业协会鼎力支持众邦科技助力企业数字化转型</a>
+      </div>
+                      <div class="flex align-center m-t-8">
+        <span class="text-999 f-s-14">03-29</span>
+        <a href="/news/detail/957" class="flex-1 text-333 f-s-14 p-l-7 line1">热烈庆祝众邦科技9周年庆生日快乐</a>
+      </div>
+                      <div class="flex align-center m-t-8">
+        <span class="text-999 f-s-14">03-01</span>
+        <a href="/news/detail/951" class="flex-1 text-333 f-s-14 p-l-7 line1">众邦科技战略年会 | 树立业界标杆 引领行业发展</a>
+      </div>
+                      <div class="flex align-center m-t-8">
+        <span class="text-999 f-s-14">02-17</span>
+        <a href="/news/detail/945" class="flex-1 text-333 f-s-14 p-l-7 line1">京东科技京东云事业群副总裁吴凯立一行到访众邦科技</a>
+      </div>
+                    </div>
+  </div>
+      <div class="new_card">
+    <div class="new_card_header flex align-center base_bg" style="background-image: url(https://store.crmeb.net/uploads/attach/2022/08/20220826/32ff7c21c5a31de9bb1decc4401cda75.png);">
+      <div class="info text-white">
+        <p class="f-s-12">Industry News</p>
+        <div class="flex align-center">
+          <span class="f-s-17">行业新闻</span>
+          <p class="f-s-12 p-l-10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">| ข่าวอุตสาหกรรม</font></font></p>
+        </div>
+      </div>
+    </div>
+    <div class="new_card_body">
+      <div class="flex align-center">
+        <a href="/news/detail/989" class="f-s-16 text-333 flex-1 font-bold line1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">กฎระเบียบยังคงเพิ่มขึ้นอย่างต่อเนื่อง และบริษัทอีคอมเมิร์ซด้านเภสัชกรรมจำเป็นต้องเรียนรู้ที่จะใช้เวลา</font></font></a>
+        <span class="new_badge"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ใหม่</font></font></span>
+      </div>
+      <p class="f-s-13 text-999 m-t-10 new_desc"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        ภายใต้การดูแลที่รัดกุม ช่วงเวลาแห่งความประมาทได้ผ่านไปแล้ว และอุตสาหกรรมจำเป็นต้องเพิ่ม "มูลค่าใหม่"				</font></font></p>
+      <p class="dash-border m-t-11"></p>
+                      <div class="flex align-center m-t-8">
+        <span class="text-999 f-s-14"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">08-21</font></font></span>
+        <a href="/news/detail/987" class="flex-1 text-333 f-s-14 p-l-7 line1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">รายงานการปฏิเสธข่าวลือบนแพลตฟอร์มสาธารณะ WeChat ในเดือนกรกฎาคม 2023</font></font></a>
+      </div>
+                      <div class="flex align-center m-t-8">
+        <span class="text-999 f-s-14"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">08-21</font></font></span>
+        <a href="/news/detail/986" class="flex-1 text-333 f-s-14 p-l-7 line1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">บริการ ThinkPHP8.0.2 Qingyan เปิดตัวอย่างเป็นทางการแล้ว - ชุมชน Qingyan แบบโต้ตอบตอบรับผลิตภัณฑ์</font></font></a>
+      </div>
+                      <div class="flex align-center m-t-8">
+        <span class="text-999 f-s-14"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">08-16</font></font></span>
+        <a href="/news/detail/985" class="flex-1 text-333 f-s-14 p-l-7 line1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ThinkPHPV8.0.2 เปิดตัว - เวอร์ชันแก้ไข</font></font></a>
+      </div>
+                      <div class="flex align-center m-t-8">
+        <span class="text-999 f-s-14"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">08-15</font></font></span>
+        <a href="/news/detail/984" class="flex-1 text-333 f-s-14 p-l-7 line1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ประกาศเรื่องการกำหนดแนวทางการคุ้มครองความเป็นส่วนตัวสำหรับมินิโปรแกรม</font></font></a>
+      </div>
+                    </div>
+  </div>
+    </div>
+<div class="qrcode_mask d-none" style="display: none;"></div>
+<div class="proview_qr pos d-none" style="display: none;">
+  <div class="header flex flex-justify-center align-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ประสบการณ์เชิงลึกของผลิตภัณฑ์</font></font></div>
+  <div class="code_body flex flex-column flex-justify-center align-center">
+    <img class="qrocde" src="https://crmebgw.oss-cn-hangzhou.aliyuncs.com/e17d0202303011450059740.png" alt="รหัส QR บัญชีอย่างเป็นทางการของ CRMEB">
+    <p class="detail flex flex-justify-center align-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">กดแบบยาวเพื่อระบุและติดต่อฝ่ายบริการลูกค้า</font></font></p>
+  </div>
+  <span class="close iconfont iconguanbi1 pointer"></span>
+</div>
+</div>
+<script>
+$(function (){
+  var swiper = new Swiper(".banner", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    autoplay: true,
+    loop: true,
+  });
+  var swiper1 = new Swiper(".swiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    autoplay: true,
+    loop: true,
+  });
+  $('.kefu_qr').click(function(){
+    $('.qrcode_mask').show();
+    $('.proview_qr').show();
+  })
+  $('.iconguanbi1').click(function(){
+    $('.qrcode_mask').hide();
+    $('.proview_qr').hide();
+  })
+})
+</script>
+
+<style>
+.footer{
+  background: #1E2738;
+  padding: 0.25rem 0.2rem 0.38rem;
+  margin-bottom: 0.48rem;
+}
+.footer .link_list a{
+  display: inline-block;
+  font-size: 0.14rem;
+  line-height: 0.3rem;
+  color: #929EB0;
+}
+.footer .hr{
+  margin-top: 0.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.code_item img{
+  width: 0.24rem;
+  margin-right: 0.13rem;
+}
+.code_item .tit{
+  color: #929EB0;
+  font-size: 0.14rem;
+}
+.code_item .code{
+  font-size: 0.14rem;
+  font-weight: bold;
+  color: #929EB0;
+  margin-top: 0.06rem;
+}
+.call{
+  display: block;
+  margin-top: 0.08rem;
+  font-size: 0.12rem;
+  color: #929EB0;
+}
+.m-b-24{
+  margin-bottom: 0.24rem;
+}
+.back_box{
+  width: 100%;
+  height: 0.48rem;
+  background: linear-gradient(270deg,#2A7EFB  0%, #309BFF 100%);
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0 0.53rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.14rem;
+  z-index: 999;
+}
+.back_box a{
+  color: #fff;
+  text-decoration: none;
+}
+.p-l-11{
+  padding-left: 0.11rem;
+}
+.v_line{
+  display: inline-block;
+  width: 1px;
+  height: 0.17rem;
+  background-color: rgba(255,255,255,0.3);
+}
+.m-t-20{
+  margin-top: 0.2rem !important;
+}
+</style>
+<footer class="footer">
+<div class="link_list flex flex-justify-between">
+  <a href="https://store.crmeb.net/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ห้างสรรพสินค้าอย่างเป็นทางการ</font></font></a>
+  <a href="/ask"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ชุมชนด้านเทคนิค</font></font></a>
+  <a href="https://doc.crmeb.com/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เอกสารช่วยเหลือ</font></font></a>
+  <a href="/news/list"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ข่าว</font></font></a>
+</div>
+<div class="link_list flex flex-justify-between">
+  <a href="/market"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ตลาดบริการ</font></font></a>
+  <a href="/service"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">การสนับสนุนการบริการ</font></font></a>
+  <a href="/about/region"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ความร่วมมือ</font></font></a>
+  <a href="/about"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">เกี่ยวกับเรา</font></font></a>
+</div>
+<p class="hr"></p>
+<div class="flex align-center flex-justify-between m-t-24 m-b-24">
+  <div class="flex align-center code_item">
+    <img src="https://s3.bmp.ovh/imgs/2023/01/17/9e798df73921ddc3.png" alt="">
+    <div>
+      <p class="tit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">องค์กรเทคโนโลยีขั้นสูงแห่งชาติ</font></font></p>
+      <p class="code"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2378291723190890</font></font></p>
+    </div>
+  </div>
+  <div class="flex align-center code_item">
+    <img src="https://s3.bmp.ovh/imgs/2023/01/17/f4b310b87783531f.png" alt="">
+    <div>
+      <p class="tit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">รหัสรายชื่อคณะกรรมการนวัตกรรมวิทยาศาสตร์และเทคโนโลยี</font></font></p>
+      <p class="code"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">83293491029</font></font></p>
+    </div>
+  </div>
+</div>
+<div>
+  <a class="call" href="tel:400-8888-794"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">สายด่วนแห่งชาติ: 400-8888-794</font></font></a>
+  <a class="call" href="tel:18702931075"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ความร่วมมือด้านการลงทุน: 18702931075 (ผู้จัดการ Zhao)</font></font></a>
+  <a class="call" href="tel:15209248005"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ความร่วมมือที่กำหนดเอง: 15209248005 (แฟนผู้จัดการ)</font></font></a>
+  <p class="call"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ที่อยู่บริษัท: อาคาร C พื้นที่ 4 โซนการเงินและการค้าพลังงาน เขต Qindu เมืองเซียนหยาง มณฑลส่านซี</font></font></p>
+  <p class="call"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ใบอนุญาตประกอบธุรกิจโทรคมนาคมมูลค่าเพิ่ม: Shaanxi B2-20210243</font></font></p>
+  <div class="flex flex-justify-center m-t-15">
+    <img src="/static/images/wap_footer_qr_1.png" alt="" style="height: 1.4rem">
+    <img src="/static/images/wap_footer_qr_2.png" alt="" style="height: 1.4rem">
+  </div>
+  <p class="call text-center m-t-20"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">© 2014-2023 www.crmeb.com มณฑลส่านซี ICP หมายเลข 23654899-6</font></font></p>
+</div>
+<div class="back_box">
+  <div class="flex align-center" id="backTop">
+    <span class="iconfont iconfanhuidingbu1"></span>
+    <span class="p-l-11"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">กลับไปด้านบน</font></font></span>
+  </div>
+  <span class="v_line"></span>
+  <a class="flex align-center" href="tel:400-8888-794">
+    <span class="iconfont icondianhua6"></span>
+    <span class="p-l-11"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ติดต่อฝ่ายบริการลูกค้า</font></font></span>
+  </a>
+</div>
+</footer>
+<script>
+$('#backTop').click(function(){
+  (function n() {
+    var t = document.documentElement.scrollTop || document.body.scrollTop;
+    if (t > 0) {
+      window.requestAnimationFrame(n);
+      window.scrollTo(0, t - t / 5)
+    }
+  })()
+})
+</script>
+<script>
+var _hmt = _hmt || [];
+function promotionService() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3b58c24a8b001683ccc36143aadc420f";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+};
+if(window.location.pathname.includes('/cpc') || sessionStorage.getItem('promotion')){
+  promotionService();
+}
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "https://hm.baidu.com/hm.js?6365358b6e93b36125dd6154d005de89";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+})();
+</script><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class=" VIpgJd-yAWNEb-hvhgNd-l4eHX-i3jM8c"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""></div><div class=" VIpgJd-yAWNEb-hvhgNd-k77Iif-i3jM8c"><div class="VIpgJd-yAWNEb-hvhgNd-IuizWc" dir="ltr">ข้อความต้นฉบับ</div><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">ให้คะแนนคำแปลนี้</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">เราจะใช้ความคิดเห็นของคุณเพื่อปรับปรุง Google แปลภาษา</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="แปลได้ดี" aria-label="แปลได้ดี" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="แปลไม่ดี" aria-label="แปลไม่ดี" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div>
+
+
+
+</body>
+
+
+</html>

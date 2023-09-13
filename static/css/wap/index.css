@@ -1,0 +1,292 @@
+.home .banner {
+  height: 100%;
+}
+
+.home .banner .swiper-pagination {
+  bottom: .2rem;
+  text-align: center;
+  font-size: 0;
+}
+
+.home .banner .swiper-pagination-bullet {
+  width: .12rem;
+  height: .03rem;
+  border-radius: 0;
+  background: #FFFFFF;
+  opacity: 0.5;
+}
+
+.home .banner .swiper-pagination-bullet-active {
+  background: #2A7EFB;
+  opacity: 1;
+}
+
+.home .banner>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 .03rem 0 0;
+}
+
+.home .banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home .navbar {
+  background: #FFFFFF;
+}
+
+.home .navbar .swiper-slide {
+  width: auto;
+  height: .4rem;
+  padding: 0 .1rem;
+  font-size: .14rem;
+  line-height: .4rem;
+  color: #555666;
+}
+
+.home .navbar+.navbar {
+  margin-top: .1rem;
+}
+
+.home .navbar .swiper-slide.active {
+  color: #2A7EFB;
+}
+
+.home .sub-navbar .swiper-slide.active::after {
+  content: "";
+  position: absolute;
+  right: .1rem;
+  bottom: 0;
+  left: .1rem;
+  height: .02rem;
+  border-radius: .04rem .04rem 0 0;
+  background: #2A7EFB;
+}
+.home .recommend{
+	padding: 0 0.15rem;
+	height: 0.75rem;
+}
+.home .recommend img{
+	width: 0.35rem;
+}
+.home .recommend_info{
+	margin-left: 0.1rem;
+}
+.home .recommend_line{
+	position: relative;
+}
+.home .recommend_line::after{
+	content:'';
+	width: 1px;
+	height: 0.32rem;
+	background-color: #eee;
+	position: absolute;
+	/*right: 0.1rem;*/
+	right: -0.15rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.home .product{
+	padding: 0.4rem 0.15rem;
+	background-color: #F5F9FF;
+}
+.home .grid_box{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	width: 100%;
+	grid-gap: 0.1rem;
+	margin-top: 0.3rem;
+}
+.home .product .grid_box .grid_item{
+	width: 1.67rem;
+	background-color: #fff;
+	border-radius: 0.02rem;
+	box-shadow: 0px 0.02rem 0.1rem 0px rgba(121,148,193,0.0588);
+	padding: 0.1rem;
+	background-image: url('https://www.crmeb.com/static/images/product_header_bg.png');
+	background-repeat: no-repeat;
+	background-size: 1rem 0.52rem;
+	background-position: right top;
+}
+.home .product .grid_box .grid_item .pro_logo{
+	width: 0.19rem;
+	height: 0.19rem;
+	margin-right: 0.06rem;
+}
+.home .product .grid_box .grid_item .pro_btn{
+	width: 0.6rem;
+	height: 0.21rem;
+	border-radius: 0.03rem;
+	border: 1px solid #2A7EFB;
+	font-size: 0.12rem;
+	text-align: center;
+	line-height: 0.2rem;
+	color: #2A7EFB;
+}
+.primary{
+	background-color: #2A7EFB;
+	color: #fff !important;
+}
+.home .kaifa{
+	padding: 0.4rem 0.15rem;
+	background-color: #F3F5FA;
+}
+.home .kaifa .bushu{
+	margin-top: 0.3rem;
+	height: 2.07rem;
+	background-image: url('https://www.crmeb.com/static/images/advantage_content_bg.png');
+}
+.home .qudao{
+	padding: 0.4rem 0.15rem;
+	background: linear-gradient(180deg, #EFF1F9 0%, #F9F9FC 100%);
+}
+.home .yanfa{
+	padding: 0.4rem 0.15rem;
+	background-color: #fff;
+}
+.home .yanfa .grid_box .grid_item{
+	width: 1.67rem;
+	height: 0.65rem;
+	border-radius: 0.02rem;
+}
+.home .shili{
+	padding: 0.4rem 0.15rem;
+	background-image: url('https://www.crmeb.com/static/images/index_section6_bg.png');
+	background-size: cover;
+}
+.home .shili .grid_item{
+	width: 1.67rem;
+	/* height: 1.85rem; */
+	border-radius: 0.06rem;
+	background-color: #2A7EFB;
+	background-image: url('https://www.crmeb.com/static/images/baozhang_bg.png');
+	background-repeat: no-repeat;
+	background-size: 0.62rem 0.62rem;
+	background-position: right top;
+	padding: 0.2rem 0.13rem 0.23rem;
+}
+.home .shili .grid_item img{
+	width: 0.25rem;
+	height: 0.25rem;
+}
+.home .shili .grid_item .sm_line{
+	width: 0.15rem;
+	height: 0.02rem;
+	background-color: #fff;
+}
+.home .hezuo{
+	padding: 0.35rem 0.15rem 0;
+	background: linear-gradient(135deg, #5D9EFF 0%, #2A7EFB 100%);
+}
+.home .hezuo .hezuo_box{
+	width: 100%;
+	border-radius: 0.06rem;
+	background-color: #fff;
+	margin-top: 0.28rem;
+	padding: 0.19rem 0.21rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	grid-row-gap: 0.2rem;
+	grid-column-gap: 0.31rem;
+	margin-bottom: 0.45rem;
+}
+.home .hezuo .hezuo_box img{
+	width: 0.8rem;
+	height: 0.38rem;
+}
+.home .news{
+	padding: 0.4rem 0.15rem;
+	background-color: #F7F7F9;
+}
+.home .news .new_card{
+	width: 3.45rem;
+	background: #FFFFFF;
+	box-shadow: 0px 0.02rem 0.1rem 0px rgba(0,0,0,0.0588);
+	border-radius: 0.04rem;
+	margin-bottom: 0.15rem;
+}
+.home .news .new_card .new_card_header{
+	width: 100%;
+	height: 1.15rem;
+	border-radius: 0.04rem 0.04rem 0 0;
+	padding: 0 0.15rem;
+}
+
+.home .news .new_card .new_card_body{
+	width: 100%;
+	border-radius: 0.04rem 0.04rem 0 0;
+	padding: 0.15rem 0.13rem;
+}
+.new_badge{
+	width: 0.27rem;
+	height: 0.14rem;
+	background: #DB514C;
+	border-radius: 0.04rem  0px 0.04rem 0;
+	text-align: center;
+	line-height: 0.14rem;
+	font-size: 0.12rem;
+	color: #fff;
+}
+.new_desc{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+.proview_qr{
+	width: 2.8rem;
+	height: 3.2rem;
+	background: #FFFFFF;
+	border-radius: 0.08rem;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1004;
+}
+.proview_qr .header {
+	width: 100%;
+	height: 0.6rem;
+	border-radius: 0.08rem 0.08rem 0 0;
+	background-image: url(/static/images/code_top_bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-size: 0.2rem;
+	font-family: PingFangSC-Semibold, PingFang SC;
+	font-weight: 600;
+	color: #FFFFFF;
+}
+.proview_qr .code_body .qrocde {
+	width: 1.8rem;
+	height: 1.8rem;
+	margin-top: 0.2rem;
+}
+.proview_qr .code_body .detail {
+	width: 1.8rem;
+	height: 0.3rem;
+	background: #F5F5F5;
+	border-radius: 0.1rem;
+	margin-top: 0.15rem;
+	font-size: 0.14rem;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: #777777;
+}
+.proview_qr .close {
+	font-size: 0.18rem;
+	color: #fff;
+	position: absolute;
+	top: 0.12rem;
+	right: 0.12rem;
+}
+.qrcode_mask {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.4);
+	z-index: 1003;
+}
